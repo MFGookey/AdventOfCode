@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.Template.Cmd", "AdventOfCode.Template.Cmd\AdventOfCode.Template.Cmd.csproj", "{AC9EAC18-33B5-4092-A34F-2C11161FC69C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Utilities", "..\..\Common\Common.Utilities\Common.Utilities.csproj", "{12DD23D4-0971-48F4-82C7-F75EDD67F75D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common.Utilities", "..\..\..\Common\Common.Utilities\Common.Utilities.csproj", "{12DD23D4-0971-48F4-82C7-F75EDD67F75D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.Template.Core", "AdventOfCode.Template.Core\AdventOfCode.Template.Core.csproj", "{BA5EDAE7-BA58-47A8-9CFB-3B4D9D6895EE}"
 EndProject
