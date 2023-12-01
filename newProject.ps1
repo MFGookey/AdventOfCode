@@ -6,7 +6,11 @@ param (
 
   [Parameter(Mandatory = $false, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Position=1)]
   [Alias('n')]
-  [string] $projectName = $null
+  [string] $projectName = $null,
+
+  [Parameter(Mandatory = $false, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Position=1)]
+  [Alias('y')]
+  [string] $year = 2023
 )
 
 if($null -eq $folderName){
@@ -31,4 +35,4 @@ if($projectName -match '[^a-zA-Z0-9\.]|^$'){
 
 Write-Host "Initializing advent project $projectName at $folderName"
 
-dotnet new advent -o "./src/$folderName" -n "$projectName"
+dotnet new advent -o "./src/$year/$folderName" -n "$projectName"
