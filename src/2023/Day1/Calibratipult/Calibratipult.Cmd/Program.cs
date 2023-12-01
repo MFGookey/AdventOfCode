@@ -31,12 +31,34 @@ namespace Calibratipult.Cmd
 
       foreach (var test in testData)
       {
-        Console.WriteLine(CalibrationValidator.ValidateCalibrationValue_First_Last_Digit(test));
+        Console.WriteLine($"{test}:\t{CalibrationValidator.ValidateCalibrationValue_First_Last_Digit(test)}");
       }
 
-      Console.WriteLine(CalibrationValidator.ValidateCalibrationValues_First_Last_Digit(testData));
+      Console.WriteLine($"Test Collection:\t{CalibrationValidator.ValidateCalibrationValues_First_Last_Digit(testData)}");
 
       var testResults = CalibrationValidator.ValidateCalibrationValues(testData);
+
+      Console.WriteLine(FormatDictionary(testResults));
+
+      testData = new List<string>
+      {
+        "two1nine",
+        "eightwothree",
+        "abcone2threexyz",
+        "xtwone3four",
+        "4nineeightseven2",
+        "zoneight234",
+        "7pqrstsixteen"
+      };
+
+      foreach (var test in testData)
+      {
+        Console.WriteLine($"{test}:\t{CalibrationValidator.ValidateCalibrationValue_First_Last_Digit_WithText(test)}");
+      }
+
+      Console.WriteLine($"Test Collection:\t{CalibrationValidator.ValidateCalibrationValues_First_Last_Digit_WithText(testData)}");
+
+      testResults = CalibrationValidator.ValidateCalibrationValues(testData);
 
       Console.WriteLine(FormatDictionary(testResults));
 
