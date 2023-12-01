@@ -1,1 +1,1 @@
-dotnet new --install .
+dotnet new --install --force .
