@@ -84,5 +84,10 @@ namespace Cubism.Core
 
       return 0;
     }
+
+    public int GetPower()
+    {
+      return this.RedCount * this.GreenCount * this.BlueCount;
+    } 
   }
 }

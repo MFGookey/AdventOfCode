@@ -31,8 +31,12 @@ namespace Cubism.Cmd
       var testEvaluator = new GameEvaluator(testData);
       Console.WriteLine(testEvaluator.SearchGames(12, 13, 14).Select(game => game.GameId).Sum());
 
+      Console.WriteLine(testEvaluator.GetGames().Select(game => game.GetPower()).Sum());
+
       var evaluator = new GameEvaluator(reader.ReadFileByLines(filePath));
       Console.WriteLine(evaluator.SearchGames(12, 13, 14).Select(game => game.GameId).Sum());
+
+      Console.WriteLine(evaluator.GetGames().Select(game => game.GetPower()).Sum());
 
       _ = Console.ReadLine();
     }

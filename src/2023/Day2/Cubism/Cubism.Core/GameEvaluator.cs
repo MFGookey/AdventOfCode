@@ -23,5 +23,10 @@ namespace Cubism.Core
             && game.BlueCount <= blueCount;
         });
     }
+
+    public IReadOnlyList<Game> GetGames()
+    {
+      return _games.ToList();
+    }
   }
 }
