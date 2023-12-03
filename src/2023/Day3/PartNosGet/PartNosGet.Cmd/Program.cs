@@ -46,8 +46,17 @@ namespace PartNosGet.Cmd
       var numbers = testMapper.FindPartNumbers();
       Console.WriteLine(numbers.Sum());
 
+      var ratios = testMapper.FindGearRatios();
+      foreach (var number in ratios)
+      {
+        Console.WriteLine(number);
+      }
+
+      Console.WriteLine(ratios.Sum());
+
       var mapper = new EngineMapper(reader.ReadFileByLines(filePath));
       Console.WriteLine(mapper.FindPartNumbers().Sum());
+      Console.WriteLine(mapper.FindGearRatios().Sum());
 
       _ = Console.ReadLine();
     }
