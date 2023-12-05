@@ -23,6 +23,18 @@ namespace LottaLotto.Core
       private set;
     }
 
+    public int InstanceCount
+    {
+      get;
+      set;
+    }
+
+    public int MatchCount
+    {
+      get;
+      private set;
+    }
+
     public Card(string toParse)
     {
       var temp = toParse.Split(':');
@@ -30,14 +42,15 @@ namespace LottaLotto.Core
       temp = temp[1].Split('|');
       this.WinningNumbers = temp[0].Trim().Replace("  ", " ").Split(" ").Select(n => int.Parse(n.Trim())).ToList();
       this.DrawnNumbers = temp[1].Trim().Replace("  ", " ").Split(" ").Select(n => int.Parse(n.Trim())).ToList();
+      this.MatchCount = this.WinningNumbers.Join(DrawnNumbers, w => w, d => d, (w, d) => w).Count();
+      this.InstanceCount = 1;
     }
 
     public int ScoreCard()
     {
-      var matches = this.WinningNumbers.Join(DrawnNumbers, w => w, d => d, (w, d) => w);
-      if (matches.Any())
+      if (this.MatchCount > 0)
       {
-        return (int)Math.Pow(2, matches.Count() - 1);
+        return (int)Math.Pow(2, this.MatchCount - 1);
       }
       return 0;
     }

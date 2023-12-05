@@ -30,10 +30,10 @@ namespace LottaLotto.Cmd
 
       var testEval = new LottoEvaluator(testData);
       Console.WriteLine(testEval.GetScore());
-
+      Console.WriteLine(testEval.GetCardCount());
       var eval = new LottoEvaluator(reader.ReadFileByLines(filePath));
       Console.WriteLine(eval.GetScore());
-
+      Console.WriteLine(eval.GetCardCount());
       _ = Console.ReadLine();
     }
   }
