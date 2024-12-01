@@ -10,7 +10,7 @@ param (
 
   [Parameter(Mandatory = $false, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Position=1)]
   [Alias('y')]
-  [string] $year = 2023
+  [string] $year = 2024
 )
 
 if($null -eq $folderName){
