@@ -15,9 +15,9 @@ namespace AdventOfCode.Template.Cmd
     /// <param name="args">Command line arguments (not used)</param>
     static void Main(string[] args)
     {
-      var filePath = "./input";
+      var filePath = "/input";
       var reader = new FileReader();
-      Console.WriteLine(reader.ReadFile(filePath).Length);
+      Console.WriteLine(reader.ReadFile(Path.Join(AppDomain.CurrentDomain.BaseDirectory, filePath)).Length);
       _ = Console.ReadLine();
     }
   }
