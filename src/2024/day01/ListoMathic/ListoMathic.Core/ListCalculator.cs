@@ -31,4 +31,13 @@ public class ListCalculator
 
     return runningSum;
   }
+
+  public long CalculateSimilarityScore(){
+    int runningSum = 0;
+    for(var index = 0;index < _leftList.Count; index++){
+      runningSum += _leftList[index] * _rightList.Count(r => r == _leftList[index]);
+    }
+
+    return runningSum;
+  }
 }

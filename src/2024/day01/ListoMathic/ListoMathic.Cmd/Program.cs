@@ -33,9 +33,11 @@ namespace ListoMathic.Cmd
 3   3".Split('\n');
       var calculator = new ListCalculator(records);
       Console.WriteLine(calculator.CalculateSumOfOrderedDifferences());
+      Console.WriteLine(calculator.CalculateSimilarityScore());
       records = formatter.FormatFile(Path.Join(AppDomain.CurrentDomain.BaseDirectory, filePath), "\n", true);
       calculator = new ListCalculator(records);
       Console.WriteLine(calculator.CalculateSumOfOrderedDifferences());
+      Console.WriteLine(calculator.CalculateSimilarityScore());
       _ = Console.ReadLine();
     }
   }
