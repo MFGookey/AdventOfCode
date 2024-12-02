@@ -53,9 +53,11 @@ humidity-to-location map:
 56 93 4";
       var testAlmanac = new Almanac(testData);
       Console.WriteLine(testAlmanac.GetMinimumLocation());
+      Console.WriteLine(testAlmanac.GetMinimumLocationByRange());
 
       var almanac = new Almanac(reader.ReadFile(filePath));
       Console.WriteLine(almanac.GetMinimumLocation());
+      Console.WriteLine(almanac.GetMinimumLocationByRange());
       _ = Console.ReadLine();
     }
   }
